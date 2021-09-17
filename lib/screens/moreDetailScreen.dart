@@ -20,10 +20,15 @@ class MoreDetailScreen extends StatelessWidget {
       dateInstance = element.updateDate;
     });
 
-    print(dateInstance);
+    var array = dateInstance.split('-');
+    var array2 = array[2].split(' ');
 
-    const url =
-        "https://www.epid.gov.lk/web/images/pdf/corona_virus_report/sitrep-sl-en-17-09_10_21.pdf";
+    print(dateInstance);
+    print(array);
+    print(array2);
+
+    var url =
+        "https://www.epid.gov.lk/web/images/pdf/corona_virus_report/sitrep-sl-en-${array2[0]}-${array[1]}_10_21.pdf";
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
