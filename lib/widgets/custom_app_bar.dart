@@ -1,3 +1,4 @@
+import 'package:covid_app/screens/moreDetailScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:covid_app/config/palatte.dart';
@@ -17,7 +18,9 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         IconButton(
           icon: Icon(Icons.notifications),
           iconSize: 28.0,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(MoreDetailScreen.routeName);
+          },
         )
       ],
     );

@@ -2,6 +2,7 @@ import 'package:covid_app/data/covidData.dart';
 import 'package:covid_app/screens/home_Screen.dart';
 import 'package:covid_app/screens/information.dart';
 import 'package:covid_app/screens/mapScreen.dart';
+import 'package:covid_app/screens/moreDetailScreen.dart';
 import 'package:covid_app/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         home: BottomNavScreen(),
         routes: {
+          MoreDetailScreen.routeName: (context) => MoreDetailScreen(),
           StatusScreen.routeName: (context) => StatusScreen(),
           MapScreen.routeName: (context) => MapScreen(),
           HomeScreen.routeName: (context) => HomeScreen(),
