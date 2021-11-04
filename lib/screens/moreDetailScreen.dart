@@ -1,3 +1,5 @@
+import 'package:covid_app/widgets/appDrawer.dart';
+
 import '../../data/covidData.dart';
 import '../widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +10,8 @@ class MoreDetailScreen extends StatelessWidget {
   static const routeName = '/moreDetailsScreen';
 
   // const MoreDetailScreen({Key? key}) : super(key: key);
+
+  GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +34,9 @@ class MoreDetailScreen extends StatelessWidget {
     var url =
         "https://www.epid.gov.lk/web/images/pdf/corona_virus_report/sitrep-sl-en-${array2[0]}-${array[1]}_10_21.pdf";
     return Scaffold(
-      appBar: CustomAppBar(),
+      key: _key,
+      appBar: CustomAppBar(_key),
+      drawer: AppDrawer(),
       body: Container(
           child: const PDF(swipeHorizontal: true).cachedFromUrl(
         url,

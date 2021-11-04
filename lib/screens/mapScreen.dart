@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:covid_app/widgets/appDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -41,13 +42,17 @@ class _MapScreenState extends State<MapScreen> {
     zoom: 14.4746,
   );
 
+  GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      key: _key,
+      appBar: CustomAppBar(_key
           // title: Text("Map Viewer"),
           // backgroundColor: Colors.purple[500],
           ),
+          drawer: AppDrawer(),
       body: GoogleMap(
         mapType: MapType.normal,
         myLocationButtonEnabled: true,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppDrawer extends StatelessWidget {
 
-  
+  static const routeName = '/customDrawer';
   
   @override
   Widget build(BuildContext context) {

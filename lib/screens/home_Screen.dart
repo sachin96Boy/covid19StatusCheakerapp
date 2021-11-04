@@ -15,14 +15,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-// GlobalKey<ScaffoldState> _key = GlobalKey();
+  GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      // key: _key,
-      appBar: CustomAppBar(),
+      key: _key,
+      appBar: CustomAppBar(_key),
       drawer: AppDrawer(),
       body: CustomScrollView(
         physics: ClampingScrollPhysics(),

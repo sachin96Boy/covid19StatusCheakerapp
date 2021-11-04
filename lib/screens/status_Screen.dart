@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:covid_app/widgets/appDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
@@ -60,6 +61,8 @@ class _StatusScreenState extends State<StatusScreen> {
     super.didChangeDependencies();
   }
 
+  GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     final covidData = Provider.of<CovidData>(context, listen: false);
@@ -69,7 +72,9 @@ class _StatusScreenState extends State<StatusScreen> {
     final pcrDates = covidData.date;
 
     return Scaffold(
-      appBar: CustomAppBar(),
+      key: _key,
+      appBar: CustomAppBar(_key),
+      drawer: AppDrawer(),
       backgroundColor: Palette.primaryColor,
       body: _isLoading
           ? Center(

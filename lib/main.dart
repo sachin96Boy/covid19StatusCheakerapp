@@ -4,6 +4,7 @@ import 'package:covid_app/screens/information.dart';
 import 'package:covid_app/screens/mapScreen.dart';
 import 'package:covid_app/screens/moreDetailScreen.dart';
 import 'package:covid_app/screens/screens.dart';
+import 'package:covid_app/widgets/appDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
           StatusScreen.routeName: (context) => StatusScreen(),
           MapScreen.routeName: (context) => MapScreen(),
           HomeScreen.routeName: (context) => HomeScreen(),
-          InformationScreen.routeName: (context) => InformationScreen()
+          InformationScreen.routeName: (context) => InformationScreen(),
+          AppDrawer.routeName: (context)=> AppDrawer()
         },
       ),
     );

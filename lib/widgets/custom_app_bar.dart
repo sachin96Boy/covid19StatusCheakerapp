@@ -1,9 +1,13 @@
 import 'package:covid_app/screens/moreDetailScreen.dart';
+import 'package:covid_app/widgets/appDrawer.dart';
 import 'package:flutter/material.dart';
 
 import 'package:covid_app/config/palatte.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+  GlobalKey<ScaffoldState> globalKey;
+
+  CustomAppBar(this.globalKey);
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -12,7 +16,9 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       leading: IconButton(
         icon: Icon(Icons.menu),
         iconSize: 28.0,
-        onPressed: () {},
+        onPressed: () {
+          globalKey.currentState!.openDrawer();
+        },
       ),
       actions: <Widget>[
         IconButton(

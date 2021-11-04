@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:covid_app/widgets/appDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -25,6 +26,8 @@ class _InformationScreenState extends State<InformationScreen> {
     await Permission.microphone.request();
   }
 
+  GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   void initState() {
     // TODO: implement initState
@@ -42,7 +45,9 @@ class _InformationScreenState extends State<InformationScreen> {
   Widget build(BuildContext context) {
     const url = "https://vocaroo.com/";
     return Scaffold(
-      appBar: CustomAppBar(),
+      key: _key,
+      appBar: CustomAppBar(_key),
+      drawer: AppDrawer(),
       body: Container(
         child: InAppWebView(
           initialUrlRequest: URLRequest(url: Uri.parse(url)),
