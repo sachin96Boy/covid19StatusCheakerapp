@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-
+import '../screens/analisis_screen.dart';
 import '../screens/mapScreen.dart';
 import '../screens/home_Screen.dart';
 import '../screens/status_Screen.dart';
@@ -17,13 +17,14 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     StatusScreen(),
     MapScreen(),
     InformationScreen(),
+    AnalisisScreen(),
   ];
 
   int _currentIndex = 0;
-  
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -42,6 +43,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
           Icons.insert_chart,
           Icons.add_location,
           Icons.info,
+          Icons.web
         ]
             .asMap()
             .map(
