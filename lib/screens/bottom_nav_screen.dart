@@ -42,7 +42,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
           Icons.home,
           Icons.insert_chart,
           Icons.add_location,
-          Icons.info,
+          Icons.mic,
           Icons.web
         ]
             .asMap()
