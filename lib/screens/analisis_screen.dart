@@ -30,7 +30,7 @@ class _AnalisisScreenState extends State<AnalisisScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const url = "https://coughcovidprediction.herokuapp.com";
+    const url = "https://caughprediction.herokuapp.com";
     return Scaffold(
       key: _key,
       appBar: CustomAppBar(_key),
