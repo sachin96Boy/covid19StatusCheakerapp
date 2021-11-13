@@ -7,6 +7,7 @@ import '../screens/status_Screen.dart';
 import '../screens/information.dart';
 
 class BottomNavScreen extends StatefulWidget {
+  static const routeName = '/bottomNavScreen';
   @override
   _BottomNavScreenState createState() => _BottomNavScreenState();
 }

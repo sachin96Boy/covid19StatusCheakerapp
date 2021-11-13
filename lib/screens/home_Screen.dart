@@ -88,6 +88,34 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: screenHeight * 0.03,
                 ),
+                const Text(
+                  'Fever ',
+                  style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w700),
+                ),
+                const Text(
+                  'Cough',
+                  style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w700),
+                ),
+                const Text(
+                  'Difficulty Breathing',
+                  style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w700),
+                ),
+                const Text(
+                  'Loss of taste or Smell',
+                  style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w700),
+                ),
               ],
             ),
           ],

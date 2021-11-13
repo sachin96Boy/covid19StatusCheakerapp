@@ -1,3 +1,4 @@
+import 'package:covid_app/screens/bottom_nav_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -58,6 +59,21 @@ class AppDrawer extends StatelessWidget {
             title: Text("0112112705"),
             subtitle: Text("Quarantine Unit"),
             onTap: () => Navigator.of(context).pop(),
+          ),
+          Divider(
+            thickness: 1,
+            indent: 20.0,
+            endIndent: 20.0,
+            color: Colors.grey,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.arrow_back,
+              color: Colors.green,
+            ),
+            title: Text("Back to Main"),
+            onTap: () => Navigator.of(context)
+                .pushReplacementNamed(BottomNavScreen.routeName),
           ),
         ],
       ),

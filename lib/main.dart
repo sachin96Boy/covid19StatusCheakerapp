@@ -34,7 +34,9 @@ class MyApp extends StatelessWidget {
           MapScreen.routeName: (context) => MapScreen(),
           HomeScreen.routeName: (context) => HomeScreen(),
           InformationScreen.routeName: (context) => InformationScreen(),
-          AppDrawer.routeName: (context)=> AppDrawer()
+          AppDrawer.routeName: (context)=> AppDrawer(),
+          BottomNavScreen.routeName: (context)=> BottomNavScreen()
+
         },
       ),
     );
