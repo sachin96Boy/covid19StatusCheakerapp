@@ -52,7 +52,7 @@ class _MapScreenState extends State<MapScreen> {
           // title: Text("Map Viewer"),
           // backgroundColor: Colors.purple[500],
           ),
-          drawer: AppDrawer(),
+      drawer: AppDrawer(),
       body: GoogleMap(
         mapType: MapType.normal,
         myLocationButtonEnabled: true,

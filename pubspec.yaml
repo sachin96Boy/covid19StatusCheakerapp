@@ -40,6 +40,7 @@ dependencies:
   flutter_inappwebview: ^5.3.2
   permission_handler: ^8.1.4+2
   flutter_cached_pdfview: ^0.4.0-nullsafety
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,8 @@ flutter:
     - assets/images/P2_wshHnds.png
     - assets/images/P3_StyHome.png
     - assets/images/P4_socDist.png
+
+    - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

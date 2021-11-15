@@ -1,8 +1,10 @@
-import 'package:covid_app/widgets/appDrawer.dart';
-import 'package:covid_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:permission_handler/permission_handler.dart';
+
+import '../widgets/appDrawer.dart';
+import '../widgets/custom_app_bar.dart';
 
 class AnalisisScreen extends StatefulWidget {
   const AnalisisScreen({Key? key}) : super(key: key);
@@ -12,8 +14,6 @@ class AnalisisScreen extends StatefulWidget {
 }
 
 class _AnalisisScreenState extends State<AnalisisScreen> {
-  late InAppWebViewController _webViewController;
-
   Future webViewMethod() async {
     print("permission granted");
     await Permission.phone.request();
@@ -30,14 +30,14 @@ class _AnalisisScreenState extends State<AnalisisScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const url = "https://caughprediction.herokuapp.com";
+    final url = dotenv.env['COUGH_ANALYSIS'];
     return Scaffold(
       key: _key,
       appBar: CustomAppBar(_key),
       drawer: AppDrawer(),
       body: Container(
         child: InAppWebView(
-          initialUrlRequest: URLRequest(url: Uri.parse(url)),
+          initialUrlRequest: URLRequest(url: Uri.parse(url!)),
           initialOptions: InAppWebViewGroupOptions(
               crossPlatform: InAppWebViewOptions(
                 mediaPlaybackRequiresUserGesture: false,
@@ -45,9 +45,7 @@ class _AnalisisScreenState extends State<AnalisisScreen> {
               android: AndroidInAppWebViewOptions(
                 useHybridComposition: true,
               )),
-          onWebViewCreated: (InAppWebViewController controller) {
-            _webViewController = controller;
-          },
+          onWebViewCreated: (InAppWebViewController controller) {},
           androidOnPermissionRequest: (InAppWebViewController controller,
               String origin, List<String> resources) async {
             return PermissionRequestResponse(
