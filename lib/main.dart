@@ -6,11 +6,13 @@ import 'package:covid_app/screens/moreDetailScreen.dart';
 import 'package:covid_app/screens/screens.dart';
 import 'package:covid_app/widgets/appDrawer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
 import './screens/bottom_nav_screen.dart';
 
-main() {
+main() async {
+  await dotenv.load(fileName: ".env");
   runApp(MyApp());
 }
 
