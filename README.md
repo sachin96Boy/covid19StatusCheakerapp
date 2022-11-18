@@ -1,16 +1,52 @@
-# covid_app
+## Covid19 Tracker
 
-A new Flutter project.
+### Description
+this app was designed to help people to know the health status of their body and to know the best way to deal with it.
+it has a lot of features that help the user to know the best way to deal with his health status.
 
-## Getting Started
+### Features
+App consist of global and local covid 19 statistics, BMI calculator, and a health tips section.
 
-This project is a starting point for a Flutter application.
+generate statistical data on sri lanka covid status
 
-A few resources to get you started if this is your first Flutter project:
+Graph view on PCR and Antigen tests carried out in sri lanka
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Google map section to see the covid hotspots in sri lanka
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+voice analisis to know the health status of the user and determine if the user is covid infected or not
+
+### Technologies
+*Flutter
+*Dart
+
+
+### Screenshots
+
+![Screenshot_1](https://github.com/sachin96Boy/DailyHealthApp/blob/master/assets/screeens/CMIS3242-presentation_page-0001.jpg)
+
+![Screenshot_2](https://github.com/sachin96Boy/DailyHealthApp/blob/master/assets/screeens/CMIS3242-presentation_page-0004.jpg)    
+
+![Screenshot_3](https://github.com/sachin96Boy/DailyHealthApp/blob/master/assets/screeens/CMIS3242-presentation_page-0005.jpg)
+
+![Screenshot_4](https://github.com/sachin96Boy/DailyHealthApp/blob/master/assets/screeens/CMIS3242-presentation_page-0011.jpg)
+
+![Screenshot_5](https://github.com/sachin96Boy/DailyHealthApp/blob/master/assets/screeens/CMIS3242-presentation_page-0012.jpg)
+
+
+### Setup
+To run this project, install it locally using flutter:
+
+
+### Contact
+sachin96Boy
+
+### License
+This project is open source and available under the MIT License.
+
+### Acknowledgments
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
+
+
+
